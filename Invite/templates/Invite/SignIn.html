@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<title>Access In</title>
+
+	<link rel="stylesheet" href="{% static 'Invite/css/SignIn.css' %}">
+</head>
+<body background="{% static 'Invite/svg/Backgroundspace.svg' %}">
+	
+	<div class="main-container">
+		<div class="form-container">
+			<form method="POST" action="" novalidate>
+				{% csrf_token %}
+				<h1>Alien AccessKey</h1>
+				<p>You Don't have Access Key? <a href="{% url 'sign-up-btn' %}">Get Access Key</a></p>
+				<input type="text" name="Luser-name" class="Luser-name" placeholder="Enter Your Aleneous">
+				<input type="password" name="Luser-pass" class="Luser-pass" placeholder="Enter Your accesskey">
+				<br>
+				<button>Access</button>
+				{% for message in messages %}
+				<p>{{message}}</p>
+				{% endfor %}
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

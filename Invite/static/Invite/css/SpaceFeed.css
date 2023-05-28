@@ -1,0 +1,62 @@
+.main-Space-container{
+    margin-left: 2rem;
+}
+h3{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* style the trending business new */
+
+.Space {
+    padding: 10px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    display: flex;
+    max-width: 100%;
+    margin: 10px;
+    overflow: hidden;
+    width: 720px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+
+  .Space-Post-preview {
+    background-color: #1c1c1c;
+    /* padding: 30px; */
+    max-width: 200px;
+  }
+
+  .Space-Post-info {
+    background-color: #1c1c1c;
+    position: relative;
+    width: 100%;
+
+  }
+  .Space-Post-preview .Space-Post-Img{
+    max-width: 80%;
+    border-radius: 10px;
+  }
+
+.Space-Post-info .Space-Post-heading a{
+    font-size:18px;
+    color: #eee4e4;
+    font-family: Bahnschrift SemiBold;
+    text-decoration: none;
+    /* margin: 0; */
+}
+
+
+.Space-Post-info .Space-Post-date{
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.Space-Post-info .Space-Post-desc{
+    font-size: 15px;
+    margin-top: 3px;
+    font-family: Comic Sans MS;
+    color: #666666;
+}

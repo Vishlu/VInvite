@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+	<title></title>
+<style>
+
+
+body { 
+  display: grid;
+  grid-template-areas: 
+  "nav article"
+  "footer footer";
+  grid-template-rows: 1fr 6%;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  height: 100vh;
+  margin: 0;
+  background-color: #212121;
+  }
+
+
+@media all and (max-width: 575px) {
+  body { 
+  	display: grid;
+  	grid-template-areas: 
+  	"nav"
+  	"article"
+  	"footer";
+  	grid-template-rows: repeat(3, 1fr);
+  	grid-template-columns: 1fr;
+  }
+
+  #sky-g{
+  	margin-top: 5em;
+ 	max-width: 100px;
+ 	}
+
+ .Form-container{
+ 	margin-top: 5em;
+ 	}
+
+ .Info-footer{
+	margin-top: 1em;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+    background-color: #1C1C1C;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 3em;
+    margin-bottom: 2em;
+	}
+
+.Info-footer a{
+	text-decoration: none;
+	color: #666666;
+	font-size: 15px;
+	word-spacing: 5px;
+}
+
+}
+
+
+#mainNav{
+   grid-area: nav;
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+}
+
+#mainArticle{
+   grid-area: article;
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+}
+
+#mainFooter{
+   grid-area: footer;
+   text-align: center;
+   background-color: #1C1C1C;
+}
+
+.Info-footer{
+	margin-top: 1em;
+	text-align: center;
+    background-color: #1C1C1C;
+    font-family: "Times New Roman", Times, serif;
+    word-spacing: 5px;
+}
+
+.Info-footer a{
+	text-decoration: none;
+	color: #666666;
+}
+
+#sky-g{
+ 	max-width: 400px;
+ }
+
+
+.Form-container .btn{
+	width: 280px;
+	height: 45px;
+	border: none;
+	border-radius: 25px;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	display: inline-block;
+	font-size: 18px;
+	background-color: #1C1C1C ;
+	color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+p{
+	font-family: "Times New Roman", Times, serif;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+#auth-btn-icon{
+	color: #008AE6;
+	font-size: 25px;
+}
+
+/* background="D:\Internet\VInvite\FRONT-END\background-space.svg */
+
+</style>
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body background="D:\Internet\VInvite\FRONT-END\background-space.svg">
+
+	<nav id="mainNav">
+	<div class="Form-container">
+	<form method="POST" action="">
+
+		<button type="submit" class="btn"><i id="auth-btn-icon" class='bx bxs-log-in'></i> Sign In</button><br>
+		<center><p>or</p></center>
+		<button type="submit" class="btn"><i id="auth-btn-icon" class='bx bxs-envelope'></i> Sign Up</button>
+	</form>
+	</div>
+
+	</nav>
+
+
+	<article id="mainArticle">
+		<img id="sky-g" src="D:\Internet\VInvite\FRONT-END\sky-icon.svg"/>
+	</article>
+
+ 	<footer id="mainFooter">
+ 		<div class="Info-footer">
+ 		<a href="#">About Us</a>
+ 		<a href="#">Community</a>
+ 		<a href="#">Privacy & Policy</a>
+ 		<a href="#">Terms of Services</a>
+ 		<a href="#">FAQ</a>
+ 		<a href="#">Alien Feedback</a>
+ 		<div>
+ 	</footer>
+ 
+</body>
+</html>

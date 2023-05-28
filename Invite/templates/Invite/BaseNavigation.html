@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://www.cssscript.com/demo/sticky.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+    <!--=============== BOXICONS ===============-->
+    <link
+     id="fav-ico" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!--=============== CSS ===============-->
+
+    <title>{% block title %} {% endblock title %}</title>
+
+    <style>
+
+      /*=============== VARIABLES CSS ===============*/
+      :root {
+        /*========== Colors ==========*/
+        /*Color mode HSL(hue, saturation, lightness)*/
+        --first-color: #008ae6; /* hsl(228, 81%, 49%) icon hover blue color */
+        --title-color: #4d4d4d; /* hsl(228, 12%, 15%);  side bar icon color black */
+        --text-color: #666666; /*  hsl(228, 8%, 50%);*/
+        --body-color: #212121; /*  hsl(0, 0%, 13%);*/
+        --container-color: #1c1c1c;
+        /*========== Font and typography ==========*/
+        /*.5rem = 8px | 1rem = 16px ...*/
+        --body-font: "Poppins", sans-serif;
+        --normal-font-size: 0.938rem;
+      }
+      /* Responsive typography */
+      @media screen and (min-width: 968px) {
+        :root {
+          --normal-font-size: 1rem;
+        }
+      }
+      /*=============== BASE ===============*/
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        position: relative;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        background-color: var(--body-color);
+        color: var(--text-color);
+      }
+      a {
+        text-decoration: none;
+      }
+      /*=============== NAV ===============*/
+      .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .section {
+        padding: 2rem 0;
+      }
+      @media screen and (max-width: 767px) {
+        .nav__logo,
+        .nav__toggle,
+        .nav__name {
+          display: none;
+        }
+        .nav__list {
+          position: fixed;
+          bottom: 2rem;
+          background-color: var(--container-color);
+          box-shadow: 0 8px 24px hsla(228, 81%, 24%, 0.15);
+          width: 90%;
+          padding: 30px 40px;
+          border-radius: 1rem;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 36px;
+          transition: 0.4s;
+        }
+      }
+      .nav__link {
+        display: flex;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .nav__link i {
+        font-size: 1.25rem;
+      }
+      .nav__link:hover {
+        color: var(--first-color);
+      }
+      /* Active link */
+      .active-link {
+        color: var(--first-color);
+      }
+      /*=============== BREAKPOINTS ===============*/
+      /* For small devices */
+      @media screen and (max-width: 320px) {
+        .nav__list {
+          column-gap: 20px;
+        }
+      }
+      /* For medium devices */
+      @media screen and (min-width: 576px) {
+        .nav__list {
+          width: 332px;
+        }
+      }
+      @media screen and (min-width: 767px) {
+        .container {
+          margin-left: 7rem;
+          margin-right: 1.5rem;
+        }
+        .nav {
+          position: fixed;
+          left: 0;
+          background-color: var(--container-color);
+          box-shadow: 1px 0 4px hsla(228, 81%, 49%, 0.15);
+          width: 84px;
+          height: 100vh;
+          padding: 2rem;
+          transition: 0.3s;
+        }
+        .nav__logo {
+          display: flex;
+        }
+        .nav__logo i {
+          font-size: 1.25rem;
+          color: var(--first-color);
+        }
+        #V-Logo {
+          max-width: 21px;
+          border: 1px solid #008ae6;
+          border-radius: 50%;
+          background-color: transparent;
+          outline: 1px solid black;
+        }
+        {% comment %} #V-Logo:hover {
+          color: #008ae6;
+        }  {% endcomment %}
+
+        .nav__logo-name {
+          color: var(--title-color);
+          font-weight: 600;
+        }
+
+        .nav__logo-name:hover{
+          color: var(--first-color);
+        }
+
+        .nav__logo,
+        .nav__link {
+          align-items: center;
+          column-gap: 1rem;
+        }
+        .nav__list {
+          display: grid;
+          row-gap: 2.5rem;
+          margin-top: 10.5rem;
+        }
+        .nav__content {
+          overflow: hidden;
+          height: 100%;
+        }
+        .nav__toggle {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: var(--title-color);
+          color: #fff;
+          border-radius: 50%;
+          font-size: 1.2rem;
+          display: grid;
+          place-items: center;
+          top: 2rem;
+          right: -10px;
+          cursor: pointer;
+          transition: 0.4s;
+        }
+      }
+      /* Show menu */
+      .show-menu {
+        width: 240px;
+      }
+      /* Rotate toggle icon */
+      .rotate-icon {
+        transform: rotate(180deg);
+      }
+      /* For 2K & 4K resolutions */
+      @media screen and (min-width: 2048px) {
+        body {
+          zoom: 1.7;
+        }
+      }
+      @media screen and (min-width: 3840px) {
+        body {
+          zoom: 2.5;
+        }
+      }
+
+      .voice-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 1.25rem;
+        color: #666666;
+      }
+      .voice-btn:hover {
+        color: #008ae6;
+        transition: 0.3s;
+      }
+
+      .nav__name:hover {
+        color: #008ae6;
+        transition: 0.3s;
+      }
+
+     
+    {% comment %} style of filters features{% endcomment %}
+      
+      .dropdown {
+        position: absolute;
+        top:4%;
+        left:70%;
+        display: inline-block;
+      }
+      
+        
+      .dropbtn {
+        background-color: #1c1c1c;
+        border-radius:50%;
+        border:1px solid #424242;
+        color: #4d4d4d;
+        padding: 16px;
+        font-size: 1;
+        cursor: pointer;
+        margin-bottom:5px;
+      }
+      #filt{
+        font-size:25px;
+      }
+
+      .dropdown-content {
+        border-radius:10px;
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #1c1c1c;
+        color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        font-size:13px;
+        border-radius:10px;
+        color: #666666;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #424242;
+        color:#008ae6;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #1c1c1c;
+        border-color: #008ae6;
+        color:#008ae6;
+      }
+
+    </style>
+    {% comment %}
+    <link
+      rel="stylesheet"
+      href="{% static 'Invite/css/BaseNavigation.css' %}"
+    />
+    {% endcomment %}
+    <link rel="stylesheet" href="{% static 'Invite/css/SearchBox.css' %}" />
+    {% block InformationTab_Style %}{% endblock %} {% block WebLink_style %}{% endblock %} {% block InfoPhoto_style %} {% endblock %}
+    {% block SportsFeed_style %}{% endblock  %}
+    {% block BusinessFeed_style %}{% endblock  %}
+    {% block SpaceFeed_style %}{% endblock  %}
+    {% block EducationFeed_style %}{% endblock  %}
+    {% block AgricultureFeed_style %}{% endblock  %}
+    {% block UserProfile_style %}{% endblock  %}
+    {% block AleneousMeet_style %}{% endblock  %}
+
+    {% block PrivacyPolicy_style %}{% endblock  %}
+    {% block TermsCondition_style %}{% endblock  %}
+    {% block AboutUs_style %}{% endblock  %}
+    {% block Community_style %}{% endblock  %}
+  </head>
+  <body>
+
+    <!--=============== NAV ===============-->
+
+    <div class="nav" id="nav">
+      <nav class="nav__content">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-chevron-right"></i>
+        </div>
+
+        <a href="{% url 'about-us-btn' %}" class="nav__logo">
+          <img src="{% static 'Invite/photos/new.png' %}" id="V-Logo" title="Hypothetical Astronomical Story of VInvite17"/>
+          <span class="nav__logo-name" style="font-family:Lucida Handwriting;">VInvite</span>
+        </a>
+
+        <div class="nav__list">
+          <a href="{% url 'user-home-btn' %}" class="nav__link active-link" title="Transmission">
+            <i class="bx bx-user-circle"></i>
+            <span class="nav__name">Aleneous</span>
+          </a>
+
+          <form method="GET" action=" ">
+            <button type="button" class="voice-btn" value="submit" onclick="location.href='{% url 'voice-btn' %}'">
+              <i class="bx bxs-microphone"></i>
+            </button>
+            &nbsp;
+            <span class="nav__name">Transmission</span>
+          </form>
+
+          <a href="{% url 'meet-btn' %}" class="nav__link" >
+            <i class="bx bx-message-rounded"></i>
+            <span class="nav__name">Aleneous Meet</span>
+          </a>
+
+          <a href="{% url 'sign-out-btn' %}" class="nav__link">
+            <i class="bx bx-log-out-circle"></i>
+            <span class="nav__name">Log out</span>
+          </a>
+
+        </div>
+      </nav>
+    </div>
+
+    <!--=============== MAIN ===============-->
+    <main class="container section">
+     
+      {% include 'Invite/SearchBox.html' %} 
+      
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn"><i class='bx bx-filter' id="filt"></i></button>
+  <div class="dropdown-content" style="left:0;">
+  <a href="{% url 'sport-btn' %}">SPORTS</a>
+  <a href="{% url 'business-btn' %}">BUSINESS</a>
+  <a href="{% url 'space-btn' %}">SPACE</a>
+  <a href="{% url 'education-btn' %}">EDUCATION</a>
+  <a href="{% url 'agriculture-btn' %}">AGRICULTURE</a>
+  </div>
+</div>
+      
+
+      <div style="margin-left: 140px; margin-top: 40px">
+        {% block informationTab %}{% endblock %}
+        {% block sportsfeed %}{% endblock %}
+        {% block businessfeed %}{% endblock %}
+        {% block spacefeed %}{% endblock %}
+        {% block educationfeed %}{% endblock %}
+        {% block agriculturefeed %}{% endblock %}
+        {% block UserProfile %}{% endblock  %}
+        {% block AleneousMeet %}{% endblock  %}
+
+        {% block PrivacyPolicy %}{% endblock  %}
+        {% block TermsCondition %}{% endblock  %}
+        {% block AboutUs %}{% endblock  %}
+        {% block Community %}{% endblock  %}
+      </div>
+    </main>
+    
+    <!--=============== main js ===============-->
+    <script>
+      /*=============== link active ===============*/
+      const linkColor = document.querySelectorAll(".nav__link");
+      function colorLink() {
+        linkColor.forEach((l) => l.classList.remove("active-link"));
+        this.classList.add("active-link");
+      }
+      linkColor.forEach((l) => l.addEventListener("click", colorLink));
+      /*=============== SHOW HIDDEN MENU ===============*/
+      const showMenu = (toggleId, navbarId) => {
+        const toggle = document.getElementById(toggleId),
+          navbar = document.getElementById(navbarId);
+        if (toggle && navbar) {
+          toggle.addEventListener("click", () => {
+            /* Show menu */
+            navbar.classList.toggle("show-menu");
+            /* Rotate toggle icon */
+            toggle.classList.toggle("rotate-icon");
+          });
+        }
+      };
+      showMenu("nav-toggle", "nav");
+    </script>
+    <script>
+      try {
+        fetch(
+          new Request(
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+            { method: "HEAD", mode: "no-cors" }
+          )
+        )
+          .then(function (response) {
+            return true;
+          })
+          .catch(function (e) {
+            var carbonScript = document.createElement("script");
+            carbonScript.src =
+              "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+            carbonScript.id = "_carbonads_js";
+            document.getElementById("carbon-block").appendChild(carbonScript);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LLWL5N9CSM");
+    </script>
+
+    <script>
+      /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+
+    <script>
+      function hello(){
+        alert('You Speak...!');
+      }
+    </script> 
+
+  </body>
+</html>

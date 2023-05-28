@@ -1,0 +1,38 @@
+{% extends 'Invite/BaseNavigation.html' %} 
+{% load static %} 
+{% block title %}Query{% endblock %} 
+{% block InformationTab_Style %}
+<link rel="stylesheet" href="{% static 'Invite/css/InformationTab.css' %}" />
+{% endblock %} {% block informationTab %}
+
+<button class="tablink" onclick="openPage('webl', this)" id="defaultOpen">
+  <i class="bx bx-search"></i>
+</button>
+<button class="tablink" onclick="openPage('webp', this)">
+  <i class="bx bxs-photo-album"></i>
+</button>
+
+<div id="webl" class="tabcontent">{% include 'Invite/InfoWeb.html' %}</div>
+
+<div id="webp" class="tabcontent">{% include 'Invite/InfoPhoto.html' %}</div>
+
+<script>
+  function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+{% endblock %}

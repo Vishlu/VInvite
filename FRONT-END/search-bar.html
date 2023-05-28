@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+
+
+		::placeholder{  /* chrome */
+			color: #424242;
+			font-family: Franklin Gothic Medium;
+		}
+
+		::placeholder{  /* firefox */
+			color: #424242;
+			font-family: Franklin Gothic Medium;
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder{ /* Internet Explorer */
+			color: #424242;
+			font-family: Franklin Gothic Medium;
+		}
+
+		::-ms-input-placeholder{ /* Ms edge */
+			color: #424242;
+			font-family: Franklin Gothic Medium;
+		}
+
+		.search-menu input[type=search]{
+			width: 45em;
+			height: 2.5em;
+			margin: 0;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+   			border: none;
+   			border: 1.1px solid #424242;
+   			outline: none;
+   			padding: 10px 20px;
+   			background-color: #1C1C1C;
+   			color: #ffffff;
+   			display: inline-block;
+   			box-sizing: border-box;
+		}
+
+		.search-menu button{
+			height: 2.5em;
+			border: 1.1px solid #424242;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			color: #4d4d4d;
+			background-color: #212121;
+			text-align: center;
+			cursor: pointer;
+			margin:0px;
+			outline: 0 none;
+			box-sizing: border-box;
+			
+		}
+
+		.btn-voice{
+			height: 2.5em;
+			border: 1.1px solid #424242;
+			border-radius: 50%;
+			color: #4d4d4d;
+			background-color: #212121;
+			text-align: center;
+			cursor: pointer;
+			margin: 0px;
+			outline: 0 none;
+			box-sizing: border-box;
+			font-size: 22px;
+			padding: 7px 8px;
+			margin-left: 10px;
+		}
+
+
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.input-box {
+  position: relative;
+  height: 2.4em;
+  max-width: 800px;
+  width: 100%;
+  background:  #1C1C1C;
+  margin: 0 20px;
+  border: 1.1px solid #424242;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.input-box i,
+.input-box .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-box i {
+  left: 20px;
+  font-size: 20px;
+  color: #4d4d4d;
+}
+.input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  padding: 0 155px 0 65px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.input-box .button {
+  right: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 30px;
+  border-radius: 6px;
+  background-color: #212121;
+  cursor: pointer;
+}
+.input-box .button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .input-box {
+    height: 30px;
+    margin: 0 8px;
+  }
+  .input-box i {
+    left: 12px;
+    font-size: 20px;
+  }
+  .input-box input {
+    padding: 0 112px 0 50px;
+  }
+  .input-box .button {
+    right: 10px;
+    font-size: 10px;
+    padding: 8px 18px;
+  }
+}
+
+	</style>
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body bgcolor="#212121">
+
+<div>
+	<div class="search-menu">
+		<form method="POST" action="">
+			<input type="search" name="user-query" class="user-query" placeholder="Search Your Planets and Visuals...">
+			<button name="btn-find" type="submit"><i class='bx bx-search bx-tada' ></i></button>
+			<buttton name="btn-voice" type="button" class="btn-voice" type="submit"><i class='bx bxs-microphone'></i></buttton>
+			
+		</form>
+	</div>
+
+<form method="POST" action="">
+	<div class="input-box">	
+      <i class="uil uil-search"></i>
+      <input type="search" placeholder="Search here..." />
+      <button class="button" type="submit"> <i class='bx bx-rocket' ></i></button>
+    </div>
+</form>
+</div>
+
+</body>
+</html>
+

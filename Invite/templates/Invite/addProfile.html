@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Add / Update {{request.user}}</title>
+    <link rel="stylesheet" href="{% static 'Invite/css/addProfile.css' %}">
+</head>
+<body>
+    <button type="button" class="btn" onclick="location.href='{% url 'user-home-btn' %}'"><i class='bx bx-arrow-back'></i></button>
+    
+    <center>
+        <div class="form-container">
+            <div class="header">
+            Profile
+            </div>
+        <form action="" method="POST"  enctype="multipart/form-data">
+        {% csrf_token %}
+            {% comment %} {% if user_profileform %} {% endcomment %}
+            {% for each_field in user_profileform %}
+            <br>
+            {{each_field.label_tag}}
+            {{each_field}}
+            <br>
+            {% endfor %}
+            {% comment %} {% endif %} {% endcomment %}
+            <br>
+        <input type="submit" value="Add/Update">
+        </form>
+        </div>
+    
+</center>
+</body>
+</html>

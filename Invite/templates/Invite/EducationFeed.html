@@ -1,0 +1,51 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+{% block EducationFeed_style %} <link rel="stylesheet" href="{% static 'Invite/css/EducationFeed.css' %}"> {% endblock  %}
+{% block educationfeed %}
+
+<div class="main-Education-container">
+
+
+    {% comment %} <div id="EducationAdvert-Container">
+      {% if thehansindia_All_B %}
+      {% for Each_thehansindia_All_B in thehansindia_All_B %}
+      <div class="Education-Advert-Container">
+        <a href="{{thehansindia_All_B.2}}" target="_blank"><img class="Education-Banner" src="{{thehansindia_All_B.2}}" /></a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+   {% endcomment %}
+  
+    <div id="Education-Post-Container">
+  
+      <h3>Trending Education News</h3>
+     
+
+      
+      {% if IndianExpress_All_PO %}
+      {% for Each_IndianExpress_All_PO in IndianExpress_All_PO %}
+        <div class="Education">
+  
+          <div class="Education-Post-preview">
+            <img class="Education-Post-Img" src="{{Each_IndianExpress_All_PO.1}}"/>
+          </div>
+          <div class="Education-Post-info">
+            <h2 class="Education-Post-heading"><a href="{{Each_IndianExpress_All_PO.0}}" target="_blank">{{Each_IndianExpress_All_PO.2}}</a>
+            </h2>
+            <h5 class="Education-Post-date">{{Each_IndianExpress_All_PO.3}}</h5>
+            <p class="Education-Post-desc">
+              {{Each_IndianExpress_All_PO.4}}
+            </p>
+          </div>
+        </div>
+  {% endfor %}
+  {% endif %}
+
+    </div>
+  
+  
+  </div>
+
+{% endblock  %}

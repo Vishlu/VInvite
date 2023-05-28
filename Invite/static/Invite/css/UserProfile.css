@@ -1,0 +1,57 @@
+.btn {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #4d4d4d;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+
+
+.profile-container{
+    /* #1c1c1c */
+    background-color: #212121 ;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-left: 2rem;
+    border:2px solid white;
+    border: none;
+    border-radius: 15px;
+}
+
+.profile-container .user-pic{
+    /* border-color: 2px solid #008AE6; */
+    max-width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+
+h3{
+ color: #008AE6;
+ font-size: 20px;
+ font-weight: bold;
+ font-family: HoloLens MDL2 Assets;
+ margin-top: 1.2rem;
+}
+p{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 14px;
+    font-family:Nirmala UI;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    word-spacing: 5px;
+}

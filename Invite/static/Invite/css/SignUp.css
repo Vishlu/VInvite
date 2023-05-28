@@ -1,0 +1,145 @@
+::placeholder{  /* chrome */
+    color: #666666;
+    font-family: Franklin Gothic Medium;
+}
+
+::placeholder{  /* firefox */
+    color: #666666;
+    font-family: Franklin Gothic Medium;
+    opacity: 1;
+}
+
+:-ms-input-placeholder{ /* Internet Explorer */
+    color: #666666;
+    font-family: Franklin Gothic Medium;
+}
+
+::-ms-input-placeholder{ /* Ms edge */
+    color: #666666;
+    font-family: Franklin Gothic Medium;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666666; 
+    border-radius: 10px;
+  }
+  
+
+body{
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+       justify-items: center;
+       align-items: center;
+       text-align: center;
+       color: white;
+       }
+
+       a{
+           text-decoration: none;
+           color: #008AE6;
+       }
+
+
+       h1{
+           font-family: Copperplate Gothic Light;
+       }
+
+
+       p{
+           font-family: Lucida Sans Typewriter;
+       }
+
+    input[type=text]{
+        width: 55%;
+           /* width: 340px;
+           height: 40px; */
+           box-sizing: border-box;
+           border-radius: 8px;
+           border: none;
+           margin: 8px 0;
+           padding: 10px 20px;
+           font-size: 15px;
+           outline: none;
+           background-color: #424242;
+           color: #008AE6;
+       }
+
+       input[type=email]{
+           width: 55%;
+           /* width: 340px;
+           height: 40px; */
+           box-sizing: border-box;
+           border-radius: 8px;
+           border: none;
+           margin: 8px 0;
+           padding: 10px 20px;
+           font-size: 15px;
+           outline: none;
+           background-color: #424242;
+           color: #008AE6;
+       }
+
+       input[type=password]{
+/*    				width: 55%; */
+           width: 340px;
+           height: 38px; 
+           box-sizing: border-box;
+           border-radius: 8px;
+           border: none;
+           margin: 8px 0;
+           padding: 10px 20px;
+           font-size: 15px;
+           outline: none;
+           background-color: #424242;
+           color: #008AE6;
+       }
+
+
+       button{
+           margin: 10px 0;
+           width: 180px;
+        height: 45px;
+        border: none;
+        border-radius: 25px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        display: inline-block;
+        font-size: 18px;
+        font-family: Lucida Handwriting;
+        background-color: #008AE6 ;
+        color: #ffffff;
+       }
+       button:hover{
+           border: 1px solid #ffffff;
+       }
+       input[type=text]:hover{
+           border: 1.1px solid #008AE6;
+       }
+
+       input[type=password]:hover{
+           border: 1.1px solid #008AE6;
+       }
+       input[type=email]:hover{
+           border: 1.1px solid #008AE6;
+       }
+
+       label p{
+           font-family: Bahnschrift SemiLight;
+       }
+
+       input[type="checkbox"]{
+           background-color: #008AE6;
+       }
+       

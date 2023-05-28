@@ -1,0 +1,12 @@
+<form method="POST" action="{% url 'query-info' %}">
+  {% csrf_token %}
+    <div class="input-box">
+      <i class="uil uil-search"></i>
+      <input type="search" name="dynamic-input" placeholder="Search Your Planets and Visuals..." />
+      <button class="button" type="submit">
+        <i class="bx bx-rocket"></i>
+      </button>
+     
+    </div>
+    
+  </form>

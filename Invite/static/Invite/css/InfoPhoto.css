@@ -1,0 +1,43 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666666; 
+  border-radius: 10px;
+}
+
+
+/* style the info photo */
+
+.WebPhotos-Alignment {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.photo-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 240px);
+  grid-row-gap: 1.5vw;
+  grid-column-gap: 1.5vw;
+  align-items: center;
+}
+
+.photo-container > .myImg {
+  max-width: 300px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.myImg:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}

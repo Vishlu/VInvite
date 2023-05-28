@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+
+		::placeholder{  /* chrome */
+			color: #666666;
+			font-family: Franklin Gothic Medium;
+		}
+
+		::placeholder{  /* firefox */
+			color: #666666;
+			font-family: Franklin Gothic Medium;
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder{ /* Internet Explorer */
+			color: #666666;
+			font-family: Franklin Gothic Medium;
+		}
+
+		::-ms-input-placeholder{ /* Ms edge */
+			color: #666666;
+			font-family: Franklin Gothic Medium;
+		}
+
+		body{
+			margin-top: 20px;
+			display: grid;
+			justify-content: center;
+   			justify-items: center;
+   			align-items: center;
+   			text-align: center;
+   			color: white;
+   			}
+
+   			a{
+   				text-decoration: none;
+   				color: #008AE6;
+   			}
+
+
+   			h1{
+   				font-family: Copperplate Gothic Light;
+   			}
+
+
+   			p{
+   				font-family: Lucida Sans Typewriter;
+   			}
+
+			input[type=text]{
+				width: 55%;
+   				/* width: 340px;
+   				height: 40px; */
+   				box-sizing: border-box;
+   				border-radius: 8px;
+   				border: none;
+   				margin: 8px 0;
+   				padding: 10px 20px;
+   				font-size: 15px;
+   				outline: none;
+   				background-color: #424242;
+   				color: #008AE6;
+   			}
+
+   			input[type=email]{
+   				width: 55%;
+   				/* width: 340px;
+   				height: 40px; */
+   				box-sizing: border-box;
+   				border-radius: 8px;
+   				border: none;
+   				margin: 8px 0;
+   				padding: 10px 20px;
+   				font-size: 15px;
+   				outline: none;
+   				background-color: #424242;
+   				color: #008AE6;
+   			}
+
+   			input[type=password]{
+/*    				width: 55%; */
+   				width: 340px;
+   				height: 38px; 
+   				box-sizing: border-box;
+   				border-radius: 8px;
+   				border: none;
+   				margin: 8px 0;
+   				padding: 10px 20px;
+   				font-size: 15px;
+   				outline: none;
+   				background-color: #424242;
+   				color: #008AE6;
+   			}
+
+
+   			button{
+   				margin: 10px 0;
+   				width: 180px;
+				height: 45px;
+				border: none;
+				border-radius: 25px;
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				display: inline-block;
+				font-size: 18px;
+				font-family: Lucida Handwriting;
+				background-color: #008AE6 ;
+				color: #ffffff;
+   			}
+   			button:hover{
+   				border: 1px solid #ffffff;
+   			}
+   			input[type=text]:hover{
+   				border: 1.1px solid #008AE6;
+   			}
+
+   			input[type=password]:hover{
+   				border: 1.1px solid #008AE6;
+   			}
+   			input[type=email]:hover{
+   				border: 1.1px solid #008AE6;
+   			}
+
+   			label p{
+   				font-family: Bahnschrift SemiLight;
+   			}
+
+   			input[type="checkbox"]{
+   				background-color: #008AE6;
+   			}
+   			
+   			
+	</style>
+	<link rel="stylesheet" href="">
+</head>
+<body background="D:\Internet\VInvite\FRONT-END\background-space.svg">
+	
+	<div class="main-container">
+		<div class="form-container">
+			<form method="POST" action="">
+
+				<h1>Aleneous Accesskey Generator</h1>
+				<p>Already have an Accesskey? <a href="">Sign In</a></p>
+				<input type="text" name="Ruser-name" class="Ruser-name" placeholder="Aleneous">
+				<br>
+				<input type="text" name="Rfirst-name" class="Rfirst-name" placeholder="First Aleneous">
+				<input type="text" name="Rlast-name" class="Rlast-name" placeholder="Last Aleneous">
+				<br>
+				<input type="email" name="Remail" class="Remail" placeholder="aleneous@congmail.com">
+				<br>
+				<input type="password" name="Rpassword" class="Rpassword" placeholder="Accesskey">
+				<input type="password" name="Rre-password" class="Rre-password" placeholder="Again-Accesskey">
+				<br>
+				<p>
+				<input type="checkbox" name="t&c" class="" value="Terms & Condition">
+				<label for="t&c" class="tc">Terms & Condition</label>
+				</p>
+				<button>Get AccessKey</button> 
+				</form>
+		</div>
+		</div>
+	</div>
+
+</body>
+</html>

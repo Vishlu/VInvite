@@ -1,0 +1,68 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %}Agriculture{% endblock %}
+{% block AgricultureFeed_style %} <link rel="stylesheet" href="{% static 'Invite/css/AgricultureFeed.css' %}">
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+    
+    /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+     
+    /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666666; 
+    border-radius: 10px;
+  }
+</style>
+
+{% endblock  %}
+{% block agriculturefeed %}
+
+
+<div class="main-Agriculture-container">
+
+
+    <div id="AgricultureAdvert-Container">
+
+      {% if HandsIndia_All_B %}
+      {% for Each_HandsIndia_All_B in HandsIndia_All_B %}
+      <div class="Agriculture-Advert-Container">
+        <a href="{{Each_HandsIndia_All_B.1}}" target="_blank"><img class="Agriculture-Banner" src="{{Each_HandsIndia_All_B.1}}" /></a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  
+  
+    <div id="Agriculture-Post-Container">
+  
+      <h3>Trending Agriculture News</h3>
+     
+  {% if TimesIndia_All_PO %}
+  {% for Each_TimesIndia_All_PO in TimesIndia_All_PO %}
+        <div class="Agriculture">
+  
+          <div class="Agriculture-Post-preview">
+            <img class="Agriculture-Post-Img" src="{{Each_TimesIndia_All_PO.1}}"/>
+          </div>
+          <div class="Agriculture-Post-info">
+            <h2 class="Agriculture-Post-heading"><a href="{{Each_TimesIndia_All_PO.0}}" target="_blank">{{Each_TimesIndia_All_PO.2}}</a>
+            </h2>
+            <h5 class="Agriculture-Post-date">{{Each_TimesIndia_All_PO.3}}</h5>
+            <p class="Agriculture-Post-desc">
+              {{Each_TimesIndia_All_PO.4}}
+            </p>
+          </div>
+        </div>
+  {% endfor %}
+  {% endif %}
+    </div>
+  
+  
+  </div>
+{% endblock  %}

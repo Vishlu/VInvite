@@ -1,0 +1,15 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %} Aleneous Meet{% endblock %}
+{% block AleneousMeet_style %} <link rel="stylesheet" href="{% static 'Invite/css/Meet.css' %}"> {% endblock  %}
+{% block AleneousMeet %}
+<body background="{% static 'Invite/photos/kepler444.jpg' %}">
+<div class="meet-container">
+<a href="https://www.nasa.gov/ames/kepler/kepler-444-an-ancient-system-with-five-planets" target="_blank">
+<h1>It takes 119 light-years for Human to reach Kepler-444 away from Earth in the constellation Lyra.</h1>
+</a>
+    {% comment %} <img src="{% static 'Invite/photos/kepler444.jpg' %}" alt="Kepler-444" title="Kepler-444"> {% endcomment %}
+
+
+<div>
+{% endblock  %}

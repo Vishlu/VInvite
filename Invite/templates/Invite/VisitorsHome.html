@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+    <title>VInvite</title>
+	<link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'Invite/css/VisitorsHome.css' %}">
+	
+</head>
+<body background="{% static 'Invite/svg/Backgroundspace.svg' %}">
+
+	<nav id="mainNav">
+	<div class="Form-container">
+	<form method="POST" action="">
+	{% csrf_token %}
+		<button type="button" class="btn" onclick="location.href='{% url 'sign-in-btn' %}'"><i id="auth-btn-icon" class='bx bxs-log-in'></i> Sign In</button><br>
+		<center><p>or</p></center>
+		<button type="button" class="btn" onclick="location.href='{% url 'sign-up-btn' %}'"><i id="auth-btn-icon" class='bx bxs-envelope'></i> Sign Up</button>
+	</form>
+	</div>
+
+	</nav>
+
+
+	<article id="mainArticle">
+		<img id="sky-g" src="{% static 'Invite/svg/SkyIconLogo.svg' %}"/>
+	</article>
+
+ 	{% include 'Invite/FooterBar.html' %} 
+ 
+</body>
+</html>

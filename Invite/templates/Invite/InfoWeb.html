@@ -1,0 +1,50 @@
+{% load static %}
+{% block WebLink_style %} <link rel="stylesheet" href="{% static 'Invite/css/WebLink.css' %}"> {% endblock %}
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+  integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+{% if Num_All_WebLinkContainer_Key %}
+<p id="HT-W">Space Travel Speed: {{final_execution_time}} to reached {{request.user}} Cool {{Num_All_WebLinkContainer_Key}} Planets</p>
+{% else %}
+<p id="HT-W">Space Travel Speed: {{final_execution_time}} to reached {{request.user}} Cool {{Num_All_WebLinkContainer_Key}} Planets</p>
+{% endif %}
+
+
+<div class="WebLink-Container">
+
+  {% if All_WebLinkContainer_Key %}
+  {% for Each_WebLinkContainer_Key in All_WebLinkContainer_Key %}
+  <div class="data-container">
+    <div class="data-header">
+      <h3>{{Each_WebLinkContainer_Key.0}}</h3>
+    </div>
+
+    <div class="data-link">
+      <a href="{{Each_WebLinkContainer_Key.3}}" target="_blank">{{Each_WebLinkContainer_Key.1}}</a>
+    </div>
+
+    <div class="data-para">
+      <p>
+        {{Each_WebLinkContainer_Key.2}}
+      </p>
+    </div>
+  </div>
+ {% endfor %}
+ {% else %}
+ <img src="{% static 'Invite/photos/pas.jpg' %}" alt="" style="max-width: 200px; border-radius:50%; margin-left:2rem;" title="vishal">
+ {% endif %}
+  
+
+</div>
+
+<script>
+  const dragArea = document.querySelector(".WebLink-Container");
+  new Sortable(dragArea, {
+    animation: 350,
+  });
+</script>

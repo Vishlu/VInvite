@@ -1,0 +1,146 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %}Space{% endblock %}
+
+{% block SpaceFeed_style %} <link rel="stylesheet" href="{% static 'Invite/css/SpaceFeed.css' %}"> 
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666666; 
+    border-radius: 10px;
+  }
+    .main-Space-container{
+        margin-left: 2rem;
+    }
+    h3{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: #fff;
+    }
+    
+    /* style the trending business new */
+    
+    .Space {
+        padding: 10px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        display: flex;
+        max-width: 100%;
+        margin: 10px;
+        overflow: hidden;
+        width: 720px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      }
+    
+      .Space-Post-preview {
+        background-color: #1c1c1c;
+        /* padding: 30px; */
+        max-width: 200px;
+      }
+    
+      .Space-Post-info {
+        background-color: #1c1c1c;
+        position: relative;
+        width: 100%;
+    
+      }
+      .Space-Post-preview .Space-Post-Img{
+        max-width: 80%;
+        border-radius: 10px;
+      }
+    
+    .Space-Post-info .Space-Post-heading a{
+        font-size:18px;
+        color: #eee4e4;
+        font-family: Bahnschrift SemiBold;
+        text-decoration: none;
+        /* margin: 0; */
+    }
+    
+    
+    .Space-Post-info .Space-Post-date{
+        font-size: 12px;
+        margin-top: 3px;
+        font-weight: lighter;
+        color: #fff;
+    }
+    
+    .Space-Post-info .Space-Post-desc{
+        font-size: 15px;
+        margin-top: 3px;
+        font-family: Comic Sans MS;
+        color: #666666;
+    }
+    
+    
+</style>
+
+{% endblock %}
+{% block spacefeed %}
+
+
+<div class="main-Space-container">
+
+
+    <div id="SpacePost-Container">
+  
+      <h3>Trending Space News</h3>
+    
+
+      {% if All_Space_News_PostContainer %}
+      {% for Each_All_Space_News_PostContainer in All_Space_News_PostContainer %}
+        <div class="Space">
+  
+          <div class="Space-Post-preview">
+            <img class="Space-Post-Img" src="{{Each_All_Space_News_PostContainer.5}}"/>
+          </div>
+          <div class="Space-Post-info">
+            <h2 class="Space-Post-heading"><a href="{{Each_All_Space_News_PostContainer.0}}">{{Each_All_Space_News_PostContainer.1}}</a>
+            </h2>
+            <h5 class="Space-Post-date">{{Each_All_Space_News_PostContainer.2}}</h5>
+            <h5 class="Space-Post-date">{{Each_All_Space_News_PostContainer.3}}</h5>
+            <p class="Space-Post-desc">
+              {{Each_All_Space_News_PostContainer.4}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+  {% endif %}
+
+
+  {% if All_Science_News_PostContainer %}
+  {% for Each_All_Science_News_PostContainer in All_Science_News_PostContainer %}
+        <div class="Space">
+  
+          <div class="Space-Post-preview">
+            <img class="Space-Post-Img" src="{{Each_All_Science_News_PostContainer.4}}"/>
+          </div>
+          <div class="Space-Post-info">
+            <h2 class="Space-Post-heading"><a href="{{Each_All_Science_News_PostContainer.0}}" target="_blank">{{Each_All_Science_News_PostContainer.2}}</a>
+            </h2>
+            <h5 class="Space-Post-date">{{Each_All_Science_News_PostContainer.1}}</h5>
+            <p class="Space-Post-desc">
+              {{Each_All_Science_News_PostContainer.3}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+      
+
+    </div>
+  
+    
+  </div>
+
+{% endblock  %}

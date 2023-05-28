@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+	<title></title>
+	<link rel="stylesheet" href="{% static 'Invite/css/SignUp.css' %}">
+</head>
+<body background="{% static 'Invite/svg/Backgroundspace.svg' %}">
+	
+	<div class="main-container">
+		<div class="form-container">
+			<form method="POST" action="" novalidate>
+				{% csrf_token %}
+				<h1>Aleneous Accesskey Generator</h1>
+				<p>Already have an Accesskey? <a href="{% url 'sign-in-btn' %}">Access</a></p>
+				<input type="text" name="Ruser-name" class="Ruser-name" placeholder="Aleneous">
+				<br>
+				<input type="text" name="Rfirst-name" class="Rfirst-name" placeholder="First Aleneous">
+				<input type="text" name="Rlast-name" class="Rlast-name" placeholder="Last Aleneous">
+				<br>
+				<input type="email" name="Remail" class="Remail" placeholder="aleneous@congmail.com">
+				<br>
+				<input type="password" name="Rpassword" class="Rpassword" placeholder="Accesskey">
+				<input type="password" name="Rre-password" class="Rre-password" placeholder="Again-Accesskey">
+				<br>
+				<p>
+				<input type="checkbox" name="t&c" class="" value="Terms & Condition">
+				<label for="t&c" class="tc">Terms & Condition</label>
+				</p>
+				<button>Get AccessKey</button> 
+				{% for message in messages %}
+				<p>{{message}}</p>
+				{% endfor %}
+				</form>
+		</div>
+		</div>
+	</div>
+
+</body>
+</html>

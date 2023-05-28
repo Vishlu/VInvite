@@ -1,0 +1,19 @@
+.meet-container{
+    margin-top: 9rem;
+    margin-left: 2rem;
+}
+
+h1{
+    margin-left: 1rem;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #008AE6;
+    margin-bottom: 8px;
+    font-family: Century Gothic;
+    text-decoration: none;
+}
+
+img{
+    max-width: 800px;
+    border-radius: 15px;
+}

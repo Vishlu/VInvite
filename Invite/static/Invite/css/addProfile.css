@@ -1,0 +1,75 @@
+body {
+  background-color: #212121;
+  color: #ffffff;
+  margin-top: 30px;
+}
+.header {
+  background-color: #008ae6;
+}
+
+.form-container {
+  border: none;
+  background-color: #1c1c1c;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+label {
+  font-size: 18px;
+
+}
+input[type="text"] {
+  width: 320px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 20px;
+  font-size: 15px;
+  outline: none;
+  background-color: #424242;
+  color: #008ae6;
+}
+textarea {
+  resize: none;
+  background-color: #424242;
+  color: #008ae6;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 10px 20px;
+}
+
+input[type="submit"] {
+  margin: 10px 0;
+  width: 110px;
+  height: 35px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Lucida Handwriting;
+  background-color: #008ae6;
+  color: #ffffff;
+}
+
+.btn{
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #4d4d4d;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}

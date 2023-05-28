@@ -1,0 +1,40 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %} {{request.user}} {% endblock %}
+
+{% block UserProfile_style %} <link rel="stylesheet" href="{% static 'Invite/css/UserProfile.css' %}"> {% endblock  %}
+
+{% block UserProfile %}
+
+
+<div class="profile-container">
+
+<form action="" method="POST">
+{% csrf_token %}
+{% for message in messages %} 
+<p>{{message}} <button type="button" class="btn" onclick="location.href='{% url 'user-home-btn' %}'"><i class='bx bxs-user-circle' ></i></button></p>
+{% endfor %} 
+
+<center>
+<div class="main-profile">
+{% if login_user %}
+<br>
+<img class="user-pic" style="border: 2px solid #008AE6;" src="{{login_user.images.url}}">
+<br>
+<br>
+<button type="button" class="btn" onclick="location.href='{% url 'addprofile-info-btn' %}'"><i class='bx bxs-edit-alt'></i></button>
+<br>
+<strong><h3>{{login_user.first_name}} {{login_user.last_name}}<br></h3></strong>
+<p>{{login_user.Bio}}</p><br>
+{% endif %}
+
+{% comment %} user:{{user_count}} {% endcomment %}
+</div>
+</center>
+
+
+
+</form>
+</div>
+
+{% endblock  %}

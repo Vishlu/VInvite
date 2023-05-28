@@ -1,0 +1,64 @@
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666666; 
+  border-radius: 10px;
+}
+
+
+.WebLink-Container {
+    margin-top: 2rem;
+  }
+  
+  .WebLink-Container .data-container {
+    margin-left: 2rem;
+    border: none;
+    background-color: #1c1c1c;
+    max-width: 62%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 15px 15px 32px 15px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  
+  .data-container .data-header h3 {
+    color: #ffffff;
+    font-family: Helvetica;
+    font-weight: lighter;
+  }
+  
+  .data-container .data-link a {
+    color: #008ae6;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: small;
+  }
+  
+  .data-container .data-link {
+    margin-top: 5px;
+  }
+  
+  .data-container .data-para p{
+    color: #666666;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  .data-container .data-para {
+    margin-top: 5px;
+  }
+

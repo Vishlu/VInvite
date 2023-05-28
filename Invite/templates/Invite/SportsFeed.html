@@ -1,0 +1,141 @@
+{% extends 'Invite/BaseNavigation.html' %}
+{% load static %}
+{% block title %}Sports{% endblock %}
+{% block SportsFeed_style %} <link rel="stylesheet" href="{% static 'Invite/css/SportsFeed.css' %}">
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666666; 
+    border-radius: 10px;
+  }
+    .main-Sports-container{
+        margin-left: 2rem;
+    }
+    h3{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: #fff;
+    }
+    
+    #SportsAdvert-Container{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main-Sports-container .Sports-Advert-Container .Sports-Banner{
+        /* margin-left: 2rem; */
+        max-width:90%;
+        border-radius: 10px;
+    
+    }
+    
+    /* style the trending business new */
+    
+    .Sports {
+        padding: 10px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        display: flex;
+        max-width: 100%;
+        margin: 10px;
+        overflow: hidden;
+        width: 720px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      }
+    
+      .Sports-Post-preview {
+        background-color: #1c1c1c;
+        /* padding: 30px; */
+        max-width: 200px;
+      }
+      .Sports-Post-info {
+        background-color: #1c1c1c;
+        position: relative;
+        width: 100%;
+    
+      }
+      .Sports-Post-preview .Sports-Post-Img{
+        max-width: 80%;
+        border-radius: 10px;
+      }
+    
+    .Sports-Post-info .Sports-Post-heading a{
+        font-size:18px;
+        color: #eee4e4;
+        font-family: Bahnschrift SemiBold;
+        text-decoration: none;
+        /* margin: 0; */
+    }
+    
+    .Sports-Post-info .Sports-Post-date{
+        font-size: 12px;
+        margin-top: 3px;
+        font-weight: lighter;
+        color: #fff;
+    }
+    
+    .Sports-Post-info .Sports-Post-desc{
+        font-size: 15px;
+        margin-top: 3px;
+        font-family: Comic Sans MS;
+        color: #666666;
+    }
+    
+
+</style>
+
+{% endblock  %}
+{% block sportsfeed %}
+
+<div class="main-Sports-container">
+
+ <div id="SportsAdvert-Container">
+      {% if TheHanIndia_Advert %}
+      {% for Each_TheHanIndia_Advert in TheHanIndia_Advert %}
+      <div class="Sports-Advert-Container">
+        <a href="{{Each_TheHanIndia_Advert.0}}" target="_blank"><img class="Sports-Banner" src="{{Each_TheHanIndia_Advert.0}}" /></a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  
+  
+    <div id="Sports-Post-Container">
+  
+      <h3>Trending Sports News</h3>
+     
+  {% if IndianExpress_Post %}
+  {% for Each_IndianExpress_Post in IndianExpress_Post %}
+        <div class="Sports">
+  
+          <div class="Sports-Post-preview">
+            <img class="Sports-Post-Img" src="{{Each_IndianExpress_Post.1}}"/>
+          </div>
+          <div class="Sports-Post-info">
+            <h2 class="Sports-Post-heading"><a href="{{Each_IndianExpress_Post.0}}" target="_blank">{{Each_IndianExpress_Post.2}}</a>
+            </h2>
+            <h5 class="Sports-Post-date">{{Each_IndianExpress_Post.3}}</h5>
+            <p class="Sports-Post-desc">
+              {{Each_IndianExpress_Post.4}}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  
+  
+  </div>
+
+{% endblock  %}

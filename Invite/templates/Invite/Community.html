@@ -1,0 +1,152 @@
+{% load static %}
+<title>Community</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="{% static 'Invite/photos/icon.png' %}">
+<link
+href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+/>
+{% block Community_style %}
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666666; 
+    border-radius: 10px;
+  }
+    main{
+        padding:5px;
+        margin-bottom:10px;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        margin-top:20px;
+        display:grid;
+        grid-template-rows:1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:10px;
+    }
+    main > .sub-container{
+        display:grid;
+        justify-self: center;
+    }
+
+    .card {
+        
+        max-width: 220px;
+        margin: 0;
+        text-align: center;
+        font-family: arial;
+      }
+      
+      .title {
+        color: #008AE6;
+        font-size: 18px;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+        font-weight: bold;
+      }
+      img{
+        max-width:80%;
+        border-radius:50%;
+        border:2px solid;
+        border-color:#008AE6;
+      }
+      
+      .edu{
+        font-size:12px;
+        font-weight: bold;
+      }
+
+      .desc{
+        font-size:15px;
+        font-weight: lighter;
+        font-family:Bahnschrift;
+      }
+      h1{
+        font-size:35px;
+        font-weight: bold;
+        font-family: Franklin Gothic Medium;
+      }
+      .copyright{
+        font-weight: bold;
+        text-align:center;
+        color:#008AE6;
+      }
+</style>
+{% endblock  %}
+
+
+{% block Community %}
+<body>
+    <center><h1>Meet the Team <br><span style="color:#008AE6">Our Community</span></h1></center>
+    <main class="main-container">
+
+        <div class="sub-container">
+
+            <div class="card">
+                <img src="{% static 'Invite/photos/nehaown2.jpeg' %}" alt="John">
+                <h2>Neha Gothal</h2>
+                <strong><p class="title">Graphic Designer</p></strong>
+                <p class="edu">Ghanshyamdas Saraf College of Arts and Commerce</p>
+                <p class="desc">I'm Neha Gothal working at WWD Travel Management as a Graphic designer and Illustration Artist as well as i am a freelancer of cards.arpan. 
+                  Here i'm change your imaginations into reality and create magic through our designs
+                </p>
+                <div style="margin: 24px 0;">
+                  <a href="https://instagram.com/cards.arpan?igshid=YmMyMTA2M2Y=" target="_blank"><i class='bx bx-globe' ></i></a>  &nbsp;
+                  <a href="https://instagram.com/gotalneha?igshid=YmMyMTA2M2Y=" target="_blank"><i class='bx bxl-instagram'></i></a> &nbsp;
+                </div>
+              </div>
+        </div> 
+
+        <div class="sub-container">
+
+            <div class="card">
+                <img src="{% static 'Invite/photos/vishalown2.jpg' %}" alt="John">
+                <h2>Vishal Prajapati</h2>
+                <strong><p class="title">Co-Founder & CEO</p></strong>
+                <p class="edu">Thakur Ramnarayan College of Arts and Commerce</p>
+                <p class="desc">My name is Vishal Prajapati and I'm pursing Bachelor of Science with Specialization in Information technology in Thakur Ramnarayan college of Arts and Commerce and I'm passionate to learn new technology very fast.</p>
+                <div style="margin: 24px 0;">
+                <a href="https://www.linkedin.com/in/vishal-prajapati-307025222" target="_blank"><i class='bx bxl-linkedin' ></i></a> &nbsp;
+                <a href="https://instagram.com/vishlu17?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram'></i></a>  &nbsp;
+                 
+                </div>
+              </div>
+        </div>
+
+        <div class="sub-container">
+
+            <div class="card">
+                <img src="{% static 'Invite/photos/sudha2.jpeg' %}" alt="John">
+                <h2>Sudhanshu Pandey</h2>
+                <strong><p class="title">Co-Founder & Dancer</p></strong>
+                <p class="edu">Thakur Ramnarayan College of Arts and Commerce</p>
+                <p class="desc">My name is sudhanshu pandey and i'm Dancer and the front phase of Audience in Trcac. I was born in 14 may and said -"Jai Shree Ram."</p>
+                <div style="margin: 24px 0;">
+                    <a href="https://instagram.com/sudhanshu_pnd?igshid=YmMyMTA2M2Y=" target="_blank"><i class='bx bxl-instagram'></i></a>  &nbsp;
+                </div>
+              </div>
+        </div>
+    </main>
+    
+    <center><div class="copyright">© 2023 VInvite17</div></center>
+</body>
+{% endblock  %}

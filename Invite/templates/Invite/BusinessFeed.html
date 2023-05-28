@@ -1,0 +1,75 @@
+{% extends 'Invite/BaseNavigation.html' %} {% load static %} {% block title %}Business{% endblock %} 
+{% block BusinessFeed_style %}
+<link rel="stylesheet" href="{% static 'Invite/css/BusinessFeed.css' %}" /> {% endblock %} 
+{% block businessfeed %}
+
+<div class="main-Business-container">
+
+ 
+  <div id="BusinessAdvert-Container">
+    {% if Business_Banner %}
+    {% for Single_Business_Banner in Business_Banner %}
+    <div class="Advert-Container">
+      <a href="{{Single_Business_Banner.1}}" target="_blank"><img class="Banner" src="{{Single_Business_Banner.1}}" /></a>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+  </div>
+
+
+
+
+
+  <div id="BusinessPost-Container">
+    <h3>Trending Business News</h3>
+    
+    {% if IndianExpress_Post_Container %}
+    {% for Each_IndianExpress_Post_Container in IndianExpress_Post_Container %}
+      <div class="Business">
+
+        <div class="Post-preview">
+          <img class="B-Post-Img" src="{{Each_IndianExpress_Post_Container.1}}"/>
+        </div>
+        <div class="Post-info">
+          <h2 class="B-Post-heading"><a href="{{Each_IndianExpress_Post_Container.0}}" target="_blank">{{Each_IndianExpress_Post_Container.2}}</a>
+          </h2>
+          <h5 class="B-Post-date">{{Each_IndianExpress_Post_Container.3}}</h5>
+          <p class="B-Post-desc">
+           {{Each_IndianExpress_Post_Container.4}}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+{% endif %}
+  </div>
+
+
+
+
+  <div id="TopNews-Container">
+    <h3>Top Business New</h3>
+    
+{% if Businesstoday_TopNews_Container %}
+{% for Each_Businesstoday_TopNews_Container in Businesstoday_TopNews_Container %}
+
+    <div class="Top-Business">
+        <div class="T-Post-preview">
+          <img class="T-Post-Img" src="{{Each_Businesstoday_TopNews_Container.2}}"/>
+        </div>
+        <div class="T-Post-info">
+            <h5 class="T-Post-category"><a href="{{Each_Businesstoday_TopNews_Container.3}}" target="_blank">{{Each_Businesstoday_TopNews_Container.0}}</a></h5>
+            <h2 class="T-Post-heading">
+              {{Each_Businesstoday_TopNews_Container.1}}
+            </h2>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+
+
+</div>
+
+{% endblock %}
