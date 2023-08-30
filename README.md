@@ -1,5 +1,5 @@
 # VInvite
-VInvite is a Search Engine where user can search the information through the internet.
+:mag: VInvite is a Search Engine where user can search the information through the internet.
 
 :dart: Different kind of news feed categories like sports, education, space news and etc.<br>
 :dart: Code generated group messaging system where user can send their messages with feeling using emojis. (Prototype Design)<br>
